@@ -11,6 +11,15 @@ clearcache:	# Clear Cache
 run:		# Run Server
 	python3 manage.py runserver 8000
 
+makemigrations:
+	python manage.py makemigrations
+
+migrate:
+	python manage.py migrate
+
+createsuperuser:
+	python manage.py createsuperuser --email admin@via-internet.de --username admin
+
 deploy:		# Deploy
 	rm -rf dist $(PREFIX_PKG)*
 	rm -rf polls.dist
